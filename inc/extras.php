@@ -24,6 +24,46 @@ function cassions_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	if ( is_front_page() || is_home() ) {
+		$homepage_layout = get_theme_mod( 'cassions_homepage_layout', 'default' );
+		$classes[] = 'homepage-'.$homepage_layout;
+	}
+
+	if ( is_page_template( 'template-fullwidth.php' )) {
+		$classes[] = 'full-width';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'cassions_body_classes' );
+
+
+// add category nicenames in body and post class
+function cassions_no_thumbnail_class( $classes ) {
+	global $post;
+	if ( ! has_post_thumbnail( $post->ID ) ) {
+		$classes[] = 'no-post-thumbnail';
+	}
+	return $classes;
+}
+add_filter( 'post_class', 'cassions_no_thumbnail_class' );
+
+/**
+ * Filter the except length to 20 characters.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+ if ( ! function_exists( 'cassions_custom_excerpt_length' ) ) :
+ function cassions_custom_excerpt_length( $length ) {
+     return 35;
+ }
+ add_filter( 'excerpt_length', 'cassions_custom_excerpt_length', 999 );
+ endif;
+
+ if ( ! function_exists( 'cassions_excerpt_more' ) ) :
+ function cassions_excerpt_more( $more ) {
+ 	return '...';
+ }
+ add_filter( 'excerpt_more', 'cassions_excerpt_more' );
+ endif;
