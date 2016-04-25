@@ -218,6 +218,10 @@ a {
 		    border-radius: 0;
 			border: none;
 		    outline: 0;
+			i {
+				position: relative;
+				top: -2px;
+			}
 		}
 	}
 	ul {
@@ -237,6 +241,11 @@ a {
 			transition: background 0.3s, box-shadow 0.3s;
 			&:hover {
 				text-decoration: underline;
+			}
+		}
+		ul {
+			a {
+				padding-left: 30px;
 			}
 		}
 	}

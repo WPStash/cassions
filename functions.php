@@ -193,6 +193,16 @@ function cassions_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name'          => esc_html__( 'Home 4', 'cassions' ),
+		'id'            => 'home-4',
+		'description'   => esc_html__( 'Add widgets here.', 'cassions' ),
+		'before_widget' => '<section id="%1$s" class="home-widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
+
+	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'cassions' ),
 		'id'            => 'footer',
 		'description'   => esc_html__( 'Add widgets here.', 'cassions' ),

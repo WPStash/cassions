@@ -105,7 +105,7 @@ class Cassions_Widget_Block1 extends WP_Widget {
                         <div class="entry-info">
                             <!-- begin .entry-content -->
                             <section class="entry-content">
-                                <?php echo wp_trim_words( get_the_content(), apply_filters( 'cassions_block2_except_lenght', 20 ), '...' ) ?>
+                                <?php echo wp_trim_words( get_the_content(), apply_filters( 'cassions_block2_except_lenght', 35 ), '...' ) ?>
                             </section>
                             <!-- end .entry-content -->
                         </div>

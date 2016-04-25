@@ -793,6 +793,11 @@ a:hover, a:active {
 	outline: 0;
 }
 
+.st-menu .header-search-form button i {
+	position: relative;
+	top: -2px;
+}
+
 .st-menu ul {
 	list-style: none;
 	margin: 0;
@@ -814,6 +819,10 @@ a:hover, a:active {
 
 .st-menu ul a:hover {
 	text-decoration: underline;
+}
+
+.st-menu ul ul a {
+	padding-left: 30px;
 }
 
 @media (max-width: 991px) {
@@ -1626,6 +1635,13 @@ a:hover, a:active {
 .post-list .entry-title {
 	font-size: 18px;
 	line-height: 1.3;
+}
+
+.home-sidebar-2, .home-sidebar-3 {
+	float: left;
+	width: 50%;
+	padding: 0 10px;
+	margin: 0;
 }
 
 /* Post Navigation */

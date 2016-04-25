@@ -34,6 +34,12 @@ get_header(); ?>
 					</div>
 				<?php } ?>
 
+				<?php if ( is_active_sidebar( 'home-4' ) ) { ?>
+					<div class="home-sidebar home-sidebar-4">
+						<?php dynamic_sidebar( 'home-4' ); ?>
+					</div>
+				<?php } ?>
+
             </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
