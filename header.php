@@ -32,7 +32,7 @@
 
 				<input type="hidden" value="post" name="post_type" id="post_type" />
 
-				<input type="text" id="s" name="s" placeholder="<?php _e('Search on this web...', 'gp'); ?>"/><button type="submit" id="searchsubmit" /><i class="fa fa-search"></i></button>
+				<input type="text" id="s" name="s" placeholder="<?php _e('Search on this web...', 'cassions'); ?>"/><button type="submit" id="searchsubmit" /><i class="fa fa-search"></i></button>
 
 			</form>
 
@@ -52,7 +52,7 @@
 							<span><?php bloginfo('name'); ?> - <time><?php echo date('l, F jS, Y'); ?></time></span>
 						</div>
 
-						<!-- begin gp-top-icons-search -->
+						<!-- begin cassions-top-icons-search -->
 						<div class="topbar-icons-search">
 
 							<div class="topbar-icons">

@@ -22,6 +22,7 @@ function cassions_customize_register( $wp_customize ) {
 				// Primary color setting
 				$wp_customize->add_setting( 'primary_color' , array(
 				    'default'     => '#2e6d9d',
+					'sanitize_callback' => 'cassions_sanitize_hex_color'
 				) );
 
 				$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
@@ -33,6 +34,7 @@ function cassions_customize_register( $wp_customize ) {
 				// Second color setting
 				$wp_customize->add_setting( 'secondary_color' , array(
 				    'default'     => '#444',
+					'sanitize_callback' => 'cassions_sanitize_hex_color'
 				) );
 				$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_color', array(
 					'label'        => __( 'Secondary Color', 'cassions' ),
