@@ -76,8 +76,9 @@ class Cassions_Widget_Block4 extends WP_Widget {
 		<div class="block4_widget_content">
 			<?php while ( $custom_query->have_posts() ) : $custom_query->the_post();  ?>
 
+				<?php $class = ( $count % 2 == 0 ) ? 'even' : ''; ?>
                 <!-- begin .hentry -->
-                <article id="post-<?php the_ID(); ?>" <?php post_class( 'block-posts-4' ); ?> >
+                <article id="post-<?php the_ID(); ?>" <?php post_class( 'block-posts-4 ' . $class ); ?> >
 
                     <!-- begin .featured-image -->
                     <?php if ( has_post_thumbnail() ) { ?>
@@ -97,6 +98,7 @@ class Cassions_Widget_Block4 extends WP_Widget {
                 <!-- end .hentry -->
 
             <?php
+			$count++;
 			endwhile; ?>
 		</div> <!-- .block2_widget_content -->
 

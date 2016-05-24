@@ -73,7 +73,7 @@ class Cassions_Widget_Block1 extends WP_Widget {
 		}
 		?>
 
-		<div class="block1_widget_content">
+		<div class="block1_widget_content clear">
 			<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); $count++; ?>
 
     			<?php

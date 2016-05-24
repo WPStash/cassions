@@ -166,7 +166,7 @@ function cassions_widgets_init() {
 		'name'          => esc_html__( 'Home 1', 'cassions' ),
 		'id'            => 'home-1',
 		'description'   => esc_html__( 'Add widgets here.', 'cassions' ),
-		'before_widget' => '<section id="%1$s" class="home-widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
@@ -176,7 +176,7 @@ function cassions_widgets_init() {
 		'name'          => esc_html__( 'Home 2', 'cassions' ),
 		'id'            => 'home-2',
 		'description'   => esc_html__( 'Add widgets here.', 'cassions' ),
-		'before_widget' => '<section id="%1$s" class="home-widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
@@ -186,7 +186,7 @@ function cassions_widgets_init() {
 		'name'          => esc_html__( 'Home 3', 'cassions' ),
 		'id'            => 'home-3',
 		'description'   => esc_html__( 'Add widgets here.', 'cassions' ),
-		'before_widget' => '<section id="%1$s" class="home-widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
@@ -196,7 +196,7 @@ function cassions_widgets_init() {
 		'name'          => esc_html__( 'Home 4', 'cassions' ),
 		'id'            => 'home-4',
 		'description'   => esc_html__( 'Add widgets here.', 'cassions' ),
-		'before_widget' => '<section id="%1$s" class="home-widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
@@ -225,6 +225,42 @@ function cassions_scripts() {
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/font-awesome.min.css', array(), '4.5' );
 
 	wp_enqueue_style( 'cassions-style', get_stylesheet_uri() );
+	$primary   = get_theme_mod( 'primary_color', '#2e6d9d' );
+	$secondary = get_theme_mod( 'secondary_color', '#111' );
+	$custom_css = "
+			button, input[type=\"button\"],
+			input[type=\"reset\"], input[type=\"submit\"]
+		 	{
+				background-color: {$primary};
+				border-color : {$primary};
+			}
+			.menu-sticky { background-color: {$primary}; }
+			.social-links a:hover::before,
+			.widget a:hover,
+			.widget-title, .widget-title a,
+			.home-sidebar .widget .widget-title::after,
+			.entry-meta,
+			.entry-meta a,
+			#respond h3#reply-title,
+			.main-navigation a:hover
+			{ color : {$primary};}
+
+			a,
+			.entry-title a,
+			.entry-title
+			{
+				color: {$secondary};
+			}
+
+			button:hover, input[type=\"button\"]:hover,
+			input[type=\"reset\"]:hover,
+			input[type=\"submit\"]:hover,
+			.st-menu .btn-close-home .home-button:hover,
+			.st-menu .btn-close-home .close-button:hover {
+					background-color: {$secondary};
+					border-color: {$secondary};
+			}";
+	wp_add_inline_style( 'cassions-style', $custom_css );
 
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'cassions-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );

@@ -16,24 +16,28 @@ get_header(); ?>
             <div class="featured-posts">
 
 				<?php if ( is_active_sidebar( 'home-1' ) ) { ?>
-				<div class="home-sidebar home-sidebar-1">
+				<div class="home-sidebar home-sidebar-1 clear">
 					<?php dynamic_sidebar( 'home-1' ); ?>
 				</div>
 				<?php } ?>
 
-				<?php if ( is_active_sidebar( 'home-2' ) ) { ?>
-					<div class="home-sidebar home-sidebar-2">
-						<?php dynamic_sidebar( 'home-2' ); ?>
+				<div class="home-sidebar clear">
+					<div class="home-inner">
+						<?php if ( is_active_sidebar( 'home-2' ) ) { ?>
+							<div class="home-sidebar-2">
+								<?php dynamic_sidebar( 'home-2' ); ?>
+							</div>
+						<?php } ?>
+
+						<?php if ( is_active_sidebar( 'home-3' ) ) { ?>
+							<div class="home-sidebar-3">
+								<?php dynamic_sidebar( 'home-3' ); ?>
+							</div>
+						<?php } ?>
 					</div>
-				<?php } ?>
+				</div>
 
-
-				<?php if ( is_active_sidebar( 'home-3' ) ) { ?>
-					<div class="home-sidebar home-sidebar-3">
-						<?php dynamic_sidebar( 'home-3' ); ?>
-					</div>
-				<?php } ?>
-
+				<div class="clear"></div>
 				<?php if ( is_active_sidebar( 'home-4' ) ) { ?>
 					<div class="home-sidebar home-sidebar-4">
 						<?php dynamic_sidebar( 'home-4' ); ?>

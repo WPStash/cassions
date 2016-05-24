@@ -16,11 +16,13 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="footer-widgets">
 				<div class="container">
+					<div class="footer-inner">
 					<?php
 						if ( is_active_sidebar( 'footer' ) ) {
 							dynamic_sidebar( 'footer' );
 						}
 					?>
+					</div>
 				</div>
 			</div>
 
@@ -36,6 +38,7 @@
 						<span class="sep"> . </span>
 						<?php printf( esc_html__( 'Theme by %2$s.', 'cassions' ), 'cassions', '<a href="https://wpstash.com" rel="designer">WPStash</a>' ); ?>
 					</div>
+
 				</div>
 			</div><!-- .site-info -->
 

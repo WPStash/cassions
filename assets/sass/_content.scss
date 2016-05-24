@@ -136,8 +136,11 @@ a.read-more {
 .archive, .search {
 	.page-header {
 		border-bottom: 1px solid #e5e5e5;
-		margin-bottom: 40px;
+		margin-bottom: 30px;
 		padding-bottom: 15px;
+		.entry-title {
+			font-size: 22px;
+		}
 	}
 	.post-grid:nth-of-type(2n+1) {
 		float: left;
