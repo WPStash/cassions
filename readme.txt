@@ -1,13 +1,16 @@
 === Cassions ===
 
 Contributors: famethemes
-Tags: white, custom-colors, fixed-width, custom-menu, editor-style, featured-images, full-width-template, two-columns, right-sidebar, translation-ready
+Tags: one-column, two-columns, right-sidebar, grid-layout, footer-widgets, blog, news, photography, custom-menu, custom-header, custom-colors, custom-background, featured-images, full-width-template, sticky-post, threaded-comments, translation-ready
 
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 0.0.1
+Stable tag: 0.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Cassions Theme, Copyright 2016 FameThemes
+Cassions is distributed under the terms of the GNU GPL
 
 A starter theme called Cassions, or underscores.
 
@@ -23,10 +26,6 @@ Cassions is a clean, simple responsive magazine theme for WordPress, packed with
 
 == Frequently Asked Questions ==
 
-== Changelog ==
-
-= 1.0 - May 12 2015 =
-* Initial release
 
 == Credits ==
 
@@ -35,3 +34,11 @@ Cassions is a clean, simple responsive magazine theme for WordPress, packed with
 * Font Awesome, SIL OFL 1.1. (http://scripts.sil.org/OFL) http://fortawesome.github.io/Font-Awesome/license/
 * sidebarEffects, Licensed under the MIT license. https://gist.github.com/Braunson/6887262
 * classie, class helper functions from bonzo https://github.com/ded/bonzo
+* Image use in screenshot: https://www.pexels.com/photo/australia-traveling-travelling-travel-68704/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+* Image use in screenshot: https://www.pexels.com/photo/apple-laptop-notebook-office-39284/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+* Image use in screenshot: https://www.pexels.com/photo/women-typing-on-the-notebook-6168/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+
+== Changelog ==
+
+= 0.0.2 =
+* Initial release

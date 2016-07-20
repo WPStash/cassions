@@ -114,8 +114,8 @@ function cassions_fonts_url() {
 	 * Translators: If there are characters in your language that are not supported
 	 * by Noto Sans, translate this to 'off'. Do not translate into your own language.
 	 */
-	if ( 'off' !== _x( 'on', 'Droid Sans font: on or off', 'cassions' ) ) {
-		$fonts[] = 'Droid Sans:400italic,600italic,700italic,400,600,700';
+	if ( 'off' !== _x( 'on', 'Droid Serif font: on or off', 'cassions' ) ) {
+		$fonts[] = 'Droid Serif:400italic,600italic,700italic,400,600,700';
 	}
 
 	/*
@@ -292,11 +292,6 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
 
 
 /**

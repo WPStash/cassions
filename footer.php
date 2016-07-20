@@ -29,15 +29,7 @@
 			<div class="site-info">
 				<div class="container">
 
-					<div class="site-copyright">
-						<?php printf( esc_html( 'All Site Contents &copy; Copyright 2016 Cassions WordPress. All Rights Reserved.', 'cassions' ) ) ?>
-					</div>
-
-					<div class="site-theme-by">
-						<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cassions' ) ); ?>"><?php printf( esc_html__( 'Powered by %s', 'cassions' ), 'WordPress' ); ?></a>
-						<span class="sep"> . </span>
-						<?php printf( esc_html__( 'Theme by %2$s.', 'cassions' ), 'cassions', '<a href="https://wpstash.com" rel="designer">WPStash</a>' ); ?>
-					</div>
+					<?php do_action( 'cassions_footer_site_info' ) ?>
 
 				</div>
 			</div><!-- .site-info -->

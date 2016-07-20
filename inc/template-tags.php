@@ -81,13 +81,13 @@ function cassions_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'cassions' ) );
 		if ( $categories_list && cassions_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'cassions' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			//printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'cassions' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'cassions' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'cassions' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tags: %1$s', 'cassions' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
@@ -98,15 +98,6 @@ function cassions_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'cassions' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
 }
 endif;
 
@@ -152,7 +143,7 @@ if ( ! function_exists( 'cassions_comments' ) ) :
  * @return void
  */
  function cassions_comments( $comment, $args, $depth ) {
- 	$GLOBALS['comment'] = $comment;
+ 	$cassionsALS['comment'] = $comment;
  	switch ( $comment->comment_type ) :
  		case 'pingback' :
  		case 'trackback' :
@@ -224,3 +215,23 @@ function cassions_category_transient_flusher() {
 }
 add_action( 'edit_category', 'cassions_category_transient_flusher' );
 add_action( 'save_post',     'cassions_category_transient_flusher' );
+
+
+if ( ! function_exists( 'cassions_footer_site_info' ) ) {
+    function cassions_footer_site_info()
+    {
+        ?>
+		<div class="site-copyright">
+			<?php printf( esc_html( 'All Site Contents &copy; Copyright 2016 Cassions WordPress. All Rights Reserved.', 'cassions' ) ) ?>
+		</div>
+
+		<div class="site-theme-by">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cassions' ) ); ?>"><?php printf( esc_html__( 'Powered by %s', 'cassions' ), 'WordPress' ); ?></a>
+			<span class="sep"> &ndash; </span>
+			<?php printf(esc_html__('%1$s theme by %2$s', 'cassions'), 'Cassions', '<a href="' . esc_url('https://wpstash.com', 'cassions') . '">WPStash</a>' ); ?>
+		</div>
+
+		<?php
+    }
+}
+add_action( 'cassions_footer_site_info', 'cassions_footer_site_info' );

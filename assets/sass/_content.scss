@@ -12,9 +12,9 @@
 
 h1.entry-title{
 	margin-top: 0;
-	font-size: 34px;
+	font-size: 26px;
 	font-weight: 700;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	line-height: 1.2;
 }
 
@@ -32,6 +32,9 @@ h1.entry-title{
 	.entry-content {
 		margin-top: 1.0625rem;
 		margin-bottom: 0;
+	}
+	.tags-links {
+		display: block;
 	}
 }
 
@@ -113,10 +116,11 @@ h2.entry-title {
 	}
 }
 .single .entry-meta {
-	font-size: 17px;
+	font-size: 13px;
 }
 
 .entry-footer {
+	color: #999;
 	a {
 		color: #999;
 		text-decoration: none;
@@ -136,8 +140,8 @@ a.read-more {
 .archive, .search {
 	.page-header {
 		border-bottom: 1px solid #e5e5e5;
-		margin-bottom: 30px;
-		padding-bottom: 15px;
+		margin-bottom: 25px;
+		padding-bottom: 5px;
 		.entry-title {
 			font-size: 22px;
 		}
