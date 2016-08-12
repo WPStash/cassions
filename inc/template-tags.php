@@ -228,7 +228,7 @@ if ( ! function_exists( 'cassions_footer_site_info' ) ) {
 		<div class="site-theme-by">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cassions' ) ); ?>"><?php printf( esc_html__( 'Powered by %s', 'cassions' ), 'WordPress' ); ?></a>
 			<span class="sep"> &ndash; </span>
-			<?php printf(esc_html__('%1$s theme by %2$s', 'cassions'), 'Cassions', '<a href="' . esc_url('https://wpstash.com', 'cassions') . '">WPStash</a>' ); ?>
+			<?php printf(esc_html__('%1$s theme by %2$s', 'cassions'), 'Cassions', '<a href="' . esc_url('https://daisythemes.com/', 'cassions') . '">DaisyThemes</a>' ); ?>
 		</div>
 
 		<?php
