@@ -9,7 +9,7 @@ input[type="submit"] {
 	background: $color__background-button;
 	box-shadow: none;
 	color: $color__white;
-	@include font-size(0.85);
+	@include font-size(0.65);
 	padding: 13px 20px;
 	cursor: pointer;
 	text-shadow: none;
@@ -59,10 +59,7 @@ textarea {
 
 form {
 	label {
-		font-size: 14px;
-		font-weight: bold;
-		color: #333;
+		font-size: 13px;
 		margin: 5px 0;
-		text-transform: uppercase;
 	}
 }

@@ -425,7 +425,7 @@ ul {
 }
 
 ol {
-	list-style: decimal;
+	list-style: none;
 }
 
 li > ul,
@@ -468,8 +468,8 @@ input[type="submit"] {
 	background: #2e6d9d;
 	box-shadow: none;
 	color: #fff;
-	font-size: 13.6px;
-	font-size: 0.85rem;
+	font-size: 10.4px;
+	font-size: 0.65rem;
 	padding: 13px 20px;
 	cursor: pointer;
 	text-shadow: none;
@@ -533,11 +533,8 @@ textarea {
 }
 
 form label {
-	font-size: 14px;
-	font-weight: bold;
-	color: #333;
+	font-size: 13px;
 	margin: 5px 0;
-	text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
@@ -1755,7 +1752,7 @@ a:hover, a:active {
 
 /* Home post list layout */
 .post-list {
-	padding-bottom: 15px;
+	padding-bottom: 1em;
 	border-bottom: 1px solid #e6e6e6;
 }
 
@@ -1814,7 +1811,7 @@ a:hover, a:active {
 .navigation .page-numbers {
 	display: inline-block;
 	background-color: #ffffff;
-	font-size: 15px;
+	font-size: 13px;
 	line-height: 30px;
 	color: #262626;
 	width: 30px;
@@ -1837,8 +1834,9 @@ a:hover, a:active {
 }
 
 .single-post .navigation .nav-links {
-	font-size: 16px;
+	font-size: 13px;
 	color: #999;
+	font-weight: bold;
 }
 
 .single-post .navigation .nav-links .nav-previous {
@@ -1853,9 +1851,15 @@ a:hover, a:active {
 	text-align: right;
 }
 
+.single-post .navigation .nav-links a {
+	text-decoration: none;
+}
+
 .single-post .navigation .nav-links span {
-	font-size: 14px;
+	font-size: 12px;
 	font-style: italic;
+	display: block;
+	font-weight: normal;
 }
 
 .single-post .navigation .nav-links h5 {
@@ -2002,14 +2006,14 @@ a:hover, a:active {
 }
 
 .hentry {
-	margin: 0 0 2em;
+	margin: 0 0 1em;
 }
 
 h1.entry-title {
 	margin-top: 0;
-	font-size: 26px;
+	font-size: 25px;
 	font-weight: 700;
-	margin-bottom: 10px;
+	margin-bottom: 3px;
 	line-height: 1.2;
 }
 
@@ -2018,7 +2022,7 @@ h1.entry-title {
 }
 
 .single .entry-header {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .single .entry-content {
@@ -2028,6 +2032,7 @@ h1.entry-title {
 
 .single .tags-links {
 	display: block;
+	color: #494949;
 }
 
 .updated:not(.published) {
@@ -2097,7 +2102,7 @@ h2.entry-title a:hover {
 	display: block;
 	font-size: 12px;
 	color: #2f6d9e;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .entry-meta div {
@@ -2173,6 +2178,10 @@ a.read-more:hover {
 --------------------------------------------------------------*/
 .comments-area {
 	margin-top: 40px;
+}
+
+.comments-area .comments-title {
+	font-size: 20px;
 }
 
 .comments-area .logged-in-as a {

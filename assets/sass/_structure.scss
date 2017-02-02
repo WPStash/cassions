@@ -194,7 +194,7 @@
 /* Home post list layout */
 
 .post-list {
-	padding-bottom: 15px;
+	padding-bottom: 1em;
 	border-bottom: 1px solid #e6e6e6;
     &:last-child {
         border: none;
@@ -239,7 +239,7 @@
     .page-numbers {
         display: inline-block;
         background-color: #ffffff;
-        font-size: 15px;
+        font-size: 13px;
         line-height: 30px;
         color: #262626;
         width: 30px;
@@ -263,8 +263,9 @@
 .single-post {
     .navigation {
         .nav-links {
-            font-size: 16px;
+            font-size: 13px;
             color: #999;
+            font-weight: bold;
             .nav-previous {
                 float: left;
                 width: 45%;
@@ -275,9 +276,14 @@
                 width: 45%;
                 text-align: right;
             }
+            a {
+                text-decoration: none;
+            }
             span {
-                font-size: 14px;
+                font-size: 12px;
                 font-style: italic;
+                display: block;
+                font-weight: normal;
             }
             h5 {
                 margin: 0;
