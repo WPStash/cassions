@@ -35,28 +35,12 @@
 	</div><!-- .entry-content -->
 	<?php } ?>
 
-	<?php
-	$prev_link = get_previous_post_link( '%link', '%title', true );
-	$next_link = get_next_post_link( '%link', '%title', true );
-	?>
-	<?php if ( $prev_link || $next_link ) : ?>
-	<div class="navigation">
-		<div class="nav-links">
-			<div class="nav-previous">
-				<?php if ( $prev_link ) { ?>
-				<span><?php esc_html_e( 'Previous article', 'cassions' ) ?></span>
-				<h5><?php echo $prev_link; ?></h5>
-				<?php } ?>
-			</div>
-			<div class="nav-next">
-				<?php if ( $next_link ) { ?>
-				<span><?php esc_html_e( 'Next article', 'cassions' ) ?></span>
-				<h5><?php echo $next_link; ?></h5>
-				<?php } ?>
-			</div>
-		</div>
-	</div>
-	<?php endif; ?>
+	<?php the_post_navigation( array(
+            'prev_text'                  => __( '<span>Previous article</span> %title', 'cassions' ),
+            'next_text'                  => __( '<span>Next article</span> %title', 'cassions' ),
+            'in_same_term'               => true,
+            'screen_reader_text' => __( 'Continue Reading', 'cassions' ),
+        ) ); ?>
 
 	<footer class="entry-footer">
 		<?php cassions_entry_footer(); ?>

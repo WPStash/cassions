@@ -67,3 +67,19 @@ add_filter( 'post_class', 'cassions_no_thumbnail_class' );
  }
  add_filter( 'excerpt_more', 'cassions_excerpt_more' );
  endif;
+
+if ( ! function_exists( 'cassions_search_form' ) )  {
+	function cassions_search_form( $form ) {
+	    $form = '<form role="search" method="get" id="searchform" class="search-form" action="' . esc_url( home_url( '/' ) ) . '" >
+	    <label for="s">
+			<span class="screen-reader-text">' . __( 'Search for:', 'cassions' ) . '</span>
+			<input type="text" class="search-field" placeholder="'. esc_attr__( 'Search', 'cassions' ) .'" value="' . get_search_query() . '" name="s" id="s" />
+		</label>
+		<button type="submit" class="search-submit">
+	        <i class="fa fa-search"></i>
+	    </button>
+	    </form>';
+	    return $form;
+	}
+}
+add_filter( 'get_search_form', 'cassions_search_form' );

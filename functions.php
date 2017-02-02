@@ -58,6 +58,7 @@ function cassions_setup() {
 		'height'      => 54,
 		'width'       => 192,
 		'flex-height' => true,
+		'flex-width' => true,
 	) );
 
 
@@ -141,7 +142,7 @@ function cassions_fonts_url() {
 		), 'https://fonts.googleapis.com/css' );
 	}
 
-	return $fonts_url;
+	return esc_url_raw( $fonts_url );
 }
 endif;
 
@@ -222,50 +223,13 @@ function cassions_scripts() {
 	wp_enqueue_style( 'cassions-fonts', cassions_fonts_url(), array(), null );
 
 	// Add Font Awesome, used in the main stylesheet.
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/font-awesome.min.css', array(), '4.5' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.5' );
 
 	wp_enqueue_style( 'cassions-style', get_stylesheet_uri() );
-	$primary   = get_theme_mod( 'primary_color', '#2e6d9d' );
-	$secondary = get_theme_mod( 'secondary_color', '#111' );
-	$custom_css = "
-			button, input[type=\"button\"],
-			input[type=\"reset\"], input[type=\"submit\"]
-		 	{
-				background-color: {$primary};
-				border-color : {$primary};
-			}
-			.menu-sticky { background-color: {$primary}; }
-			.social-links a:hover::before,
-			.widget a:hover,
-			.widget-title, .widget-title a,
-			.home-sidebar .widget .widget-title::after,
-			.entry-meta,
-			.entry-meta a,
-			#respond h3#reply-title,
-			.main-navigation a:hover
-			{ color : {$primary};}
 
-			a,
-			.entry-title a,
-			.entry-title
-			{
-				color: {$secondary};
-			}
-
-			button:hover, input[type=\"button\"]:hover,
-			input[type=\"reset\"]:hover,
-			input[type=\"submit\"]:hover,
-			.st-menu .btn-close-home .home-button:hover,
-			.st-menu .btn-close-home .close-button:hover {
-					background-color: {$secondary};
-					border-color: {$secondary};
-			}";
-	wp_add_inline_style( 'cassions-style', $custom_css );
-
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'cassions-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'cassions-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_enqueue_script( 'cassions-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array(), '20151215', true );
+	wp_enqueue_script( 'cassions-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20151215', true );
+	wp_enqueue_script( 'cassions-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), '20151215', true );
+	wp_enqueue_script( 'cassions-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array( 'jquery' ), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -301,3 +265,4 @@ require get_template_directory() . '/inc/widgets/block_1_widget.php';
 require get_template_directory() . '/inc/widgets/block_2_widget.php';
 require get_template_directory() . '/inc/widgets/block_3_widget.php';
 require get_template_directory() . '/inc/widgets/block_4_widget.php';
+require get_template_directory() . '/inc/widgets/recent-post.php';

@@ -65,8 +65,11 @@ function cassions_header_style() {
 		// If the user has set a custom color for the text use that.
 		else :
 	?>
-		.site-title a,
-		.site-description {
+		.site-header .site-title a,
+		.site-header .site-description,
+		.site-header .header-topbar .top-time,
+		.social-links a,
+		.header-top-mobile-menu-button {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
 	<?php endif; ?>

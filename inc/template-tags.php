@@ -221,17 +221,64 @@ if ( ! function_exists( 'cassions_footer_site_info' ) ) {
     function cassions_footer_site_info()
     {
         ?>
-		<div class="site-copyright">
-			<?php printf( esc_html( 'All Site Contents &copy; Copyright 2016 Cassions WordPress. All Rights Reserved.', 'cassions' ) ) ?>
-		</div>
 
 		<div class="site-theme-by">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cassions' ) ); ?>"><?php printf( esc_html__( 'Powered by %s', 'cassions' ), 'WordPress' ); ?></a>
-			<span class="sep"> &ndash; </span>
-			<?php printf(esc_html__('%1$s theme by %2$s', 'cassions'), 'Cassions', '<a href="' . esc_url('https://wpstash.com', 'cassions') . '">WPStash</a>' ); ?>
+			<?php printf( esc_html__( 'Cassions Theme by %1$s', 'cassions' ), '<a href="https://wpstash.com/" rel="designer">WPStash</a>' ); ?>
 		</div>
 
 		<?php
     }
 }
 add_action( 'cassions_footer_site_info', 'cassions_footer_site_info' );
+
+
+add_action( 'wp_enqueue_scripts', 'cassions_custom_inline_style', 100 );
+if ( ! function_exists( 'cassions_custom_inline_style' ) ) {
+
+	function cassions_custom_inline_style() {
+		$primary   = esc_attr( get_theme_mod( 'primary_color', '#2e6d9d' ) );
+		$secondary = esc_attr( get_theme_mod( 'secondary_color', '#111111' ) );
+		$custom_css = "
+				button, input[type=\"button\"],
+				input[type=\"reset\"], input[type=\"submit\"]
+			 	{
+					background-color: {$primary};
+					border-color : {$primary};
+				}
+				.menu-sticky { background-color: {$primary}; }
+			
+				.widget a:hover,
+				.widget-title, .widget-title a,
+				.home-sidebar .widget .widget-title::after,
+				.entry-meta,
+				.entry-meta a,
+				.main-navigation a:hover,
+				.main-navigation .current_page_item > a,
+				.main-navigation .current-menu-item > a,
+				.main-navigation .current_page_ancestor > a
+				{ color : {$primary}; }
+				.widget_tag_cloud a:hover { border-color : {$primary}; }
+				a,
+				.entry-title a,
+				.entry-title
+				{
+					color: {$secondary};
+				}
+
+				button:hover, input[type=\"button\"]:hover,
+				input[type=\"reset\"]:hover,
+				input[type=\"submit\"]:hover,
+				.st-menu .btn-close-home .home-button:hover,
+				.st-menu .btn-close-home .close-button:hover {
+						background-color: {$secondary};
+						border-color: {$secondary};
+				}";
+
+		if ( get_header_image() ) :
+			$custom_css .= '.site-header {  background-image: url('. esc_url( get_header_image() ) .'); background-repeat: no-repeat; background-size: 100%; }';
+		endif;
+
+		wp_add_inline_style( 'cassions-style', $custom_css );
+
+	}
+}

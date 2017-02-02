@@ -14,23 +14,24 @@
 		</div><!-- #content -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
+			
+			<?php if ( is_active_sidebar( 'footer' ) ) { ?>
 			<div class="footer-widgets">
 				<div class="container">
 					<div class="footer-inner">
-					<?php
-						if ( is_active_sidebar( 'footer' ) ) {
-							dynamic_sidebar( 'footer' );
-						}
-					?>
+					<?php	dynamic_sidebar( 'footer' ); ?>
 					</div>
 				</div>
 			</div>
+			<?php } ?>
 
 			<div class="site-info">
 				<div class="container">
+					<div class="site-copyright">
+						<?php printf( esc_html__( 'Copyright &copy; %1$s %2$s. All Rights Reserved.', 'cassions' ), date( 'Y' ), get_bloginfo( 'name' ) ); ?>
+					</div>
 
 					<?php do_action( 'cassions_footer_site_info' ) ?>
-
 				</div>
 			</div><!-- .site-info -->
 

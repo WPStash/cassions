@@ -32,7 +32,7 @@ get_header(); ?>
 							 * If you want to override this in a child theme, then include a file
 							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 							 */
-		 				get_template_part( 'template-parts/content', get_post_format() );
+		 				get_template_part( 'template-parts/content', 'list' );
 					endwhile;
 
 				} else {
@@ -40,6 +40,15 @@ get_header(); ?>
 					get_template_part( 'template-parts/content', 'none' );
 
 				}
+
+				echo '<div class="post-pagination">';
+				the_posts_pagination(array(
+					'prev_next' => true,
+					'prev_text' => '',
+					'next_text' => '',
+					'before_page_number' => '<span class="screen-reader-text">' . esc_html__('Page', 'cassions') . ' </span>',
+				));
+				echo '</div>';
 
 				?>
 			</div><!-- .featured-posts -->

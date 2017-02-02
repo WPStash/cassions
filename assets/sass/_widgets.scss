@@ -45,7 +45,7 @@
     font-weight: bold;
     color: #111111;
     padding: 0 0 5px;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     text-transform: uppercase;
     border-bottom: 3px double #e5e5e5;
 	a {
@@ -83,6 +83,9 @@
 					width: 70%;
 					padding: 0 20px 0 0;
 				}
+				.block-posts {
+					margin-bottom: 13px;
+				}
 			}
 			.block1-column-right {
 				float: left;
@@ -95,6 +98,9 @@
 					border: none;
 					margin-top: 0px;
 					padding: 0;
+				}
+				h2 {
+					margin-bottom: 0;
 				}
 			}
 			.block-posts.first {
@@ -148,7 +154,7 @@
 			.entry-title {
 				font-size: 14px;
 				line-height: 1.3;
-				margin: 0 0 10px;
+				margin: 0 0 5px;
 			}
 			.entry-meta {
 				margin: 0 0 5px;
@@ -181,13 +187,14 @@
 					width: 50%;
 				}
 				@include media-breakpoint-up(md) {
-					width: 25%;
-					&:nth-of-type(4n + 1) {
+					width: 33.33333%;
+					&:nth-of-type(3n + 1) {
 						clear: both;
 					}
 				}
 				.entry-title {
 					font-size: 14px;
+					margin-top: 10px;
 				}
 				.featured-image {
 					margin: 0;
@@ -214,21 +221,21 @@
 .widget_nav_menu ul li,
 .widget_rss ul li {
 	display: block;
-	padding-bottom: 12px;
-	margin-bottom: 12px;
+	padding-bottom: 7px;
+	margin-bottom: 7px;
 	border-bottom: 1px solid #eee;
 	position: relative;
 	&::before{
 		color: #ccc;
 		content: "\f0da";
 		font-family: 'FontAwesome';
-		font-size: 15px;
+		font-size: 13px;
 		position: absolute;
-		top: 3px;
-		left: 2px;
+		top: 1px;
+		left: 0px;
 	}
 	a {
-		padding-left: 18px;
+		padding-left: 10px;
 	}
 }
 
@@ -248,4 +255,44 @@
 		}
 	}
 
+}
+
+
+.cassions-posts-widget .widget-posts li {
+	padding: 10px 0px 13px;
+	clear: both;
+	&.has-thumb {
+		.p-info {
+			margin-left: 80px;
+		}
+	}
+	img {
+		width: 65px;
+		height: auto;
+		float: left;
+		margin-right: 10px;
+	}
+	.p-info {
+		position: relative;
+		top: -2px;
+	}
+	.entry-title {
+		font-size: 14px;
+		text-transform: none;
+		color: #222;
+		margin-bottom: 0px;
+		margin-top: 0;
+		display: inline-block;
+		font-weight: 500;
+	}
+	.entry-date {
+		display: block;
+		font-size: 13px;
+		font-style: italic;
+		color: #777777;
+		margin-top: 4px;
+	}
+	a {
+		line-height: 1.25;
+	}
 }
