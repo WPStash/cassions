@@ -30,13 +30,7 @@
 		<!-- begin .header-mobile-menu -->
 		<nav class="st-menu st-effect-3" id="menu-3">
 
-			<form class="header-search-form" role="search" method="get" action="<?php echo esc_url( site_url( '/' ) ); ?>">
-
-				<input type="hidden" value="post" name="post_type" id="post_type" />
-
-				<input type="text" id="s" name="s" placeholder="<?php _e('Search on this web...', 'cassions'); ?>"/><button type="submit" id="searchsubmit" /><i class="fa fa-search"></i></button>
-
-			</form>
+			<?php get_search_form() ?>
 
 			<?php wp_nav_menu( array('theme_location' => 'primary','echo' => true,'items_wrap' => '<ul>%3$s</ul>')); ?>
 

@@ -246,7 +246,7 @@ if ( ! function_exists( 'cassions_custom_inline_style' ) ) {
 					border-color : {$primary};
 				}
 				.menu-sticky { background-color: {$primary}; }
-			
+
 				.widget a:hover,
 				.widget-title, .widget-title a,
 				.home-sidebar .widget .widget-title::after,

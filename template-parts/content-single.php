@@ -36,10 +36,10 @@
 	<?php } ?>
 
 	<?php the_post_navigation( array(
-            'prev_text'                  => __( '<span>Previous article</span> %title', 'cassions' ),
-            'next_text'                  => __( '<span>Next article</span> %title', 'cassions' ),
+            'prev_text'                  => '<span>' . esc_html__( 'Previous article', 'cassions' ) .'</span> %title',
+            'next_text'                  => '<span>' . esc_html__( 'Next article', 'cassions' ) .'</span> %title',
             'in_same_term'               => true,
-            'screen_reader_text' => __( 'Continue Reading', 'cassions' ),
+            'screen_reader_text' 		 => esc_html__( 'Continue Reading', 'cassions' ),
         ) ); ?>
 
 	<footer class="entry-footer">

@@ -1,11 +1,11 @@
 === Cassions ===
 
 Contributors: famethemes
-Tags: one-column, two-columns, right-sidebar, grid-layout, footer-widgets, blog, news, photography, custom-menu, custom-header, custom-colors, custom-background, featured-images, full-width-template, sticky-post, threaded-comments, translation-ready
+Tags: one-column, two-columns, right-sidebar, footer-widgets, blog, news, photography, custom-menu, custom-header, custom-colors, featured-images, full-width-template, sticky-post, threaded-comments, translation-ready
 
 Requires at least: 4.0
 Tested up to: 4.4.2
-Stable tag: 0.0.4
+Stable tag: 0.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,5 +40,5 @@ Cassions is a clean, simple responsive magazine theme for WordPress, packed with
 
 == Changelog ==
 
-= 0.0.4 =
+= 0.0.5 =
 * Initial release

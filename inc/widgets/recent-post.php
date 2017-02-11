@@ -61,10 +61,7 @@ class Cassions_Posts_Widget extends WP_Widget {
                     <div class="p-info">
                     <h2 class="entry-title"><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title( ); ?></a></h2>
                     <?php
-                    printf(
-                        esc_html_x( '%s', 'post date', 'cassions' ),
-                        '<span class="entry-date">' . $time_string . '</span>'
-                    );
+                    echo '<span class="entry-date">' . $time_string . '</span>';
                     ?>
                     </div>
                 </li>
