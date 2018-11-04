@@ -225,7 +225,7 @@ if ( ! function_exists( 'cassions_footer_site_info' ) ) {
         ?>
 
 		<div class="site-theme-by">
-			<?php printf( esc_html__( 'Cassions Theme by %1$s', 'cassions' ), '<a href="https://wpstash.com/" rel="designer">WPStash</a>' ); ?>
+			<?php printf( esc_html__( 'Cassions Theme by %1$s', 'cassions' ), '<a href="https://freeresponsivethemes.com/" rel="nofollow">FRT</a>' ); ?>
 		</div>
 
 		<?php

@@ -40,5 +40,10 @@ Cassions is a clean, simple responsive magazine theme for WordPress, packed with
 
 == Changelog ==
 
+= 0.0.6 =
+* Update Author Name & Link
+* Support Gutenberg
+* Support Jetpack Infinite Scroll
+
 = 0.0.5 =
 * Initial release
