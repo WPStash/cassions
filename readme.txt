@@ -3,9 +3,9 @@
 Contributors: famethemes
 Tags: one-column, two-columns, right-sidebar, footer-widgets, blog, news, photography, custom-menu, custom-header, custom-colors, featured-images, full-width-template, sticky-post, threaded-comments, translation-ready
 
-Requires at least: 4.0
-Tested up to: 4.4.2
-Stable tag: 0.0.5
+Requires at least: 5.0
+Tested up to: 5.8.1
+Stable tag: 0.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,7 +38,12 @@ Cassions is a clean, simple responsive magazine theme for WordPress, packed with
 * Image use in screenshot: https://www.pexels.com/photo/apple-laptop-notebook-office-39284/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
 * Image use in screenshot: https://www.pexels.com/photo/women-typing-on-the-notebook-6168/. [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
 
+
+
 == Changelog ==
+= 0.0.7 =
+* WordPress 5.8 compatible.
+
 
 = 0.0.6 =
 * Update Author Name & Link

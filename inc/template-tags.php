@@ -168,7 +168,7 @@ if ( ! function_exists( 'cassions_comments' ) ) :
 
  				<div class="comment-meta comment-metadata">
 					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
-					<span class="says"><?php esc_html_e( 'says:', 'fooding' ) ?></span><br>
+					<span class="says"><?php esc_html_e( 'says:', 'cassions' ) ?></span><br>
  					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
  					<?php
  						/* translators: 1: date, 2: time */

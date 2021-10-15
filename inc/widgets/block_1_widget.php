@@ -3,7 +3,8 @@
  * Block 1 - Slider Widget
  */
 // Register the widget
-add_action( 'widgets_init', create_function( '', 'return register_widget("Cassions_Widget_Block1");'));
+register_widget( 'Cassions_Widget_Block1' );
+
 // The widget class
 class Cassions_Widget_Block1 extends WP_Widget {
 	public function __construct() {
